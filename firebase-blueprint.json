@@ -1,0 +1,59 @@
+{
+  "entities": [
+    {
+      "name": "UserProfile",
+      "description": "User profile with authentication and app preferences",
+      "properties": [
+        { "name": "uid", "type": "string", "description": "Unique Firebase Auth user ID" },
+        { "name": "name", "type": "string", "description": "Full name of the user" },
+        { "name": "username", "type": "string", "description": "Unique username" },
+        { "name": "phone", "type": "string", "description": "Phone number" },
+        { "name": "email", "type": "string", "description": "Email address" },
+        { "name": "currency", "type": "string", "description": "Preferred currency code (XAF, EUR, USD)" },
+        { "name": "language", "type": "string", "description": "Preferred language code (en, fr)" },
+        { "name": "pinCode", "type": "string", "description": "4-digit security PIN" },
+        { "name": "syncStatus", "type": "string", "description": "Sync status indicator" },
+        { "name": "createdAt", "type": "string", "description": "Creation timestamp" }
+      ]
+    },
+    {
+      "name": "Account",
+      "description": "Financial accounts like MTN MoMo, Orange Money, Bank, Cash",
+      "properties": [
+        { "name": "name", "type": "string", "description": "Account name" },
+        { "name": "type", "type": "string", "description": "Account type" },
+        { "name": "balance", "type": "number", "description": "Current balance in XAF" },
+        { "name": "currency", "type": "string", "description": "Currency code" }
+      ]
+    },
+    {
+      "name": "SavingsGoal",
+      "description": "Savings goals and milestones",
+      "properties": [
+        { "name": "title", "type": "string", "description": "Goal title" },
+        { "name": "targetAmount", "type": "number", "description": "Target amount in XAF" },
+        { "name": "currentAmount", "type": "number", "description": "Current amount saved" },
+        { "name": "category", "type": "string", "description": "Goal category" }
+      ]
+    },
+    {
+      "name": "BudgetCategory",
+      "description": "Monthly budget categories and spending",
+      "properties": [
+        { "name": "name", "type": "string", "description": "Category name" },
+        { "name": "limit", "type": "number", "description": "Monthly limit in XAF" },
+        { "name": "spent", "type": "number", "description": "Amount spent in XAF" }
+      ]
+    },
+    {
+      "name": "Transaction",
+      "description": "Financial transaction history",
+      "properties": [
+        { "name": "type", "type": "string", "description": "Transaction type: income, expense, transfer, njangi, goal_deposit" },
+        { "name": "amount", "type": "number", "description": "Transaction amount in XAF" },
+        { "name": "category", "type": "string", "description": "Category name" },
+        { "name": "date", "type": "string", "description": "Date ISO string" }
+      ]
+    }
+  ]
+}

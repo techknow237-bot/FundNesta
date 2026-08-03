@@ -1,0 +1,6 @@
+{
+  "name": "FundNesta",
+  "description": "A premium, animation-first personal savings goal and finance tracker tailored for Cameroon with XAF, MoMo, Orange Money & Njangi support.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

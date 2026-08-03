@@ -1,0 +1,16 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Allow querying and managing users collection for both Firebase Auth and custom auth fallback
+    match /users/{userId} {
+      allow read, write: if true;
+
+      // User's private subcollections (accounts, transactions, savingsGoals, budgets, recurringBills, notifications)
+      match /{subcollection}/{docId} {
+        allow read, write: if true;
+      }
+    }
+  }
+}
+
